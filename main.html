@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DC Data</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f0ff, #f7f9fc);
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 25px;
+            letter-spacing: .5px;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 430px;
+            
+            margin: 25px auto;
+            padding: 22px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+           
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 12px;
+            
+            color: #333;
+             display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: .2s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0,123,255,0.4);
+        }
+
+        .btn {
+            margin-top: 18px;
+            padding: 10px;
+            width: 48%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: .2s;
+        }
+
+        .btn-insert {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .btn-search {
+            background: #007bff;
+            color: #fff;
+            float: right;
+            gap: 5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            opacity: .95;
+        }
+
+        .search-box input {
+            width: 75%;
+            display: inline-block;
+        }
+
+        .search-box button {
+            
+            width: 23%;
+        }
+
+       .logo-icon {
+    position: fixed;   
+    top: 20px;         
+    left: 20px;        
+    width: 80px;       
+    height: auto;
+    z-index: 1000;     
+}
+
+
+    </style>
+
+    
+
+</head>
+
+<body>
+    <img src="download.png" alt="Aditya Birla" class="logo-icon">
+
+</div>
+
+
+    <h2>DC Data Entry</h2>
+
+    <!-- Search Form -->
+    <form action="connect.php" method="post" class="card search-box">
+        <input type="search" placeholder="Search..." name="search">
+        <button type="submit" class="btn btn-search" name="fetch">Search</button>
+    </form>
+
+    <!-- Insert Form -->
+    <form action="connect.php" method="post" class="card">
+        <label>Vendor Code</label>
+        <input type="number" name="vc">
+
+        <label>ASN</label>
+        <input type="text" name="ASN">
+
+        <label>Invoice No</label>
+        <input type="text" name="IN">
+
+        <label>Delivery No</label>
+        <input type="text" name="DN">
+
+        <label>Style Code</label>
+        <input type="text" name="style">
+
+        <label>Location</label>
+        <input type="text" name="loc">
+
+        <button type="submit" class="btn btn-insert" name="submit">Submit</button>
+    </form>
+
+  
+
+
+</body>
+</html>
